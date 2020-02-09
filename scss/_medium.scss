@@ -1,0 +1,243 @@
+
+
+nav {
+	background-color: $secondaryColor;
+	border-bottom:1px solid rgba(0,0,0,0.3);
+	ul li {
+		float: left;
+		width: 14%;
+		border-right: 1px solid rgba(0,0,0,0.3);
+	}// end li
+	ul li:last-child {border-right: none;}
+	ul li a {
+		display: block;
+		text-align: center;
+		font-weight: $boldWeight;
+		padding: 1rem 0;
+		color:$primaryColor;
+		text-decoration: none;
+		transition: background 0.75s ease, color 0.75s ease;
+	} // end anchors
+	ul li.active a {
+        color: $primaryColor;
+		background-color: #825f45;
+	}// end active
+	ul li a:hover {
+		color: $secondaryColor;
+		background-color: $primaryColor;
+	} // end hover
+} // end nav
+
+
+
+
+
+/*-----HEADER SOCIAL ICONS-----*/
+header {
+	padding: 2rem 0;
+    position: relative;
+    
+    ul.social {position: absolute;
+    bottom: .5rem;
+    right: $gutter;
+    }
+    
+    ul.social li {width: auto;}
+    
+    h1 {
+      margin-top: 2rem;
+      margin-left: 1rem;    
+        
+        
+        
+    }
+     h2 {
+   margin-bottom: -35px;
+         margin-left: 1rem;
+         
+    }
+    
+    
+
+
+} // end header
+
+/*  ------------- MAIN -------------  */
+main {
+
+    .row {
+        display: flex;
+        justify-content: center;
+
+        h2 {
+            font-size: 1rem;
+            color: black;
+        }
+       
+
+        .column {
+            
+            max-width: 16rem;
+            margin: 3rem .5rem;
+            padding: 2rem 0;
+        }
+
+        figure.member {
+           width: 100%;
+           margin: 1rem auto;
+        }
+
+
+        a.learnmore {
+            background-color: $secondaryColor;
+            color: black;
+            text-align: center;
+            align-content: center;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 8px;
+            display: block;
+            padding: .6rem 0;
+            margin: 0 1.5rem;
+        }
+         
+        a.learnmore:hover {
+        
+            background-color: $primaryColor;
+        }
+
+
+    }
+
+
+    
+// column code
+
+
+
+@for $i from 1 through 12 {
+    $w: ($i / 12) *100%;
+    .medium-#{$i} {width: $w; float:  left;}
+}  
+
+// end column code
+
+
+
+
+
+    
+    /*--------buttons---------------*/
+    
+    div.bigbtbox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+         grid-column-gap: 2%;
+        grid-row-gap: 0;
+        margin-left: 1.2rem;
+        margin-right: .2rem;
+         margin-top: 1rem;
+         
+    }
+  
+    
+     a.bigbt {
+        font-size: 1.5rem;
+        margin: 0 0;
+        padding: 1.5rem 1.3rem-$gutter;
+    }
+    
+    
+    
+    /*-------end of blogs-------------*/
+    
+ 
+     div.blog {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+         grid-column-gap: 2%;
+        grid-row-gap: 0;
+        margin-left: 1rem;
+        margin-right: .5rem;
+         
+    }
+    
+    
+    
+    div.blog article {
+        margin-left: 1rem $gutter;
+         margin-right: .5rem;
+        text-align: center;
+        overflow-x: hidden;
+         margin-bottom: 1.5rem;
+      
+    }
+    
+    div.blog article:nth-child(1) {
+        grid-column: 1 / span 1;
+        
+    }
+    
+    
+    
+    
+    figure {
+        text-align: center;
+      
+    }
+    
+    figure.blog {
+        width: 100%;
+      text-align: center;
+        margin-bottom: 1rem;
+    
+        
+    }
+     
+    figure.blog img {
+        width: 100%;
+    }
+    
+    
+/*-----------story code-------------*/
+    
+    
+     div.story {
+        grid-template-columns: 1fr 1fr;
+          h2 {
+            text-align: left;
+            color: black;
+        }
+    }
+    
+    div.story article {
+         margin-left: .3rem;
+        margin-right: .2rem $gutter;
+    }
+    
+      div.story article:nth-child(1) {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        padding-bottom: 0px;  
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+} // end main
+
+
+footer {
+       ul.social li a {font-size: 2.5rem;}
+    
+    
+}

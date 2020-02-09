@@ -1,0 +1,175 @@
+
+header {
+    background-color: $primaryColor;
+
+.wrapper {
+    max-width: 950px;
+    margin: auto;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/*  ------------- NAV -------------  */
+nav {
+
+    max-width: 950px;
+    margin: auto;
+
+	ul {
+		margin-left: 2%;
+		border-left: 1px solid rgba(0,0,0,0.3);
+	}
+	ul li {
+        width: auto;
+        padding-left: 0;
+	}// end li
+    ul li:last-child {border-right: 1px solid rgba(0,0,0,0.3);}
+    ul li:first-child {padding-left: 0;}
+	ul li a {
+		padding: .5rem 1rem;
+	} // and a
+} // end nav
+
+
+/*  ------------- MAIN -------------  */
+main   {
+	margin: auto;
+    
+
+
+    
+    figure.member {
+        width: 100%;
+
+        margin-bottom: 1rem;
+    
+        
+    }
+     
+    figure.member img {
+        width: 100%;
+    }
+    
+     
+       /*------blog posts-------*/
+    
+     div.blog {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+         grid-column-gap: 2%;
+        grid-row-gap: 0;
+        margin: auto;
+        width: 60rem;
+         
+    }
+  
+    div.blog article {
+       
+        margin: 3rem 0;
+        text-align: center;
+        overflow-x: hidden;
+               
+    }
+
+
+
+
+// column code
+
+.row {
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .column {
+       
+        max-width: 30rem;
+        margin: 3rem .5rem;
+        padding: 2rem 0;
+    }
+    
+    @for $i from 1 through 12 {
+        $w: ($i / 12) *100%;
+        .large-#{$i} {width: $w; float:  left;}
+    
+    
+    
+        // end column code
+
+
+
+}
+
+
+
+// column2 code
+
+
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .column {
+       
+        max-width: 30rem;
+        margin: 3rem .5rem;
+        padding: 2rem 0;
+    
+    }
+
+
+        h2.tip {
+            text-align: left;
+        }
+        
+    
+      p {
+          
+          margin: 0 1rem;
+      }
+        
+      a.stlink {
+         margin-left: 1rem;
+      }
+
+
+
+
+    
+
+    /* big box CSS */
+
+    div.bigbtbox article {
+        margin: auto 0;
+        grid-column-gap: 0;
+    }
+     
+    div.bigbtbox {
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+    
+    }
+    
+
+
+
+
+    
+    
+
+
+
+} }
